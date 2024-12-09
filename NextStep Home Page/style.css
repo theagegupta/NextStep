@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+nav {
+    /* border: 2px solid black; */
+    position:fixed;
+    z-index:1;
+    width: 100vw;
+    height: 50px;
+    color: white;
+    background: 10px solid white;
+    display: flex;
+    background-color: rgb(85, 137, 198, 0.95);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    padding-right: 50px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    ;
+}
+
+#profile-icon:hover
+{
+    color: black;
+}
+
+header {
+    /* border: 2px solid yellow; */
+    height: fit-content;
+    /* justify-items: center; */
+}
+
+.get-started-container {
+    height: 100vh;
+    /* border: 2px solid white; */
+    /* text-align: center; */
+    align-content: center;
+}
+
+#get-started {
+    display: flex;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    height: fit-content;
+    gap: 30px;
+    width: fit-content
+}
+
+
+#intro {
+    text-align: left;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro h1 {
+    /* border: 2px solid blue; */
+    font-size: 6.1rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    line-height: 120px;
+}
+
+#intro h2 {
+    /* border: 2px solid yellow; */
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    font-size: 2.2rem;
+    font-family: "Lobster Two";
+    /* font-style: italic; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    /* line-height: ; */
+}
+
+#intro>button {
+    margin-top: 20px;
+    font-size: 1rem;
+    width: 100px;
+    padding: 8px 3px;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(85, 137, 198, 0.7);
+    /* border: 1.5px solid white; */
+    border: none;
+    font-style: normal;
+    transition: all 0.2s ease;
+    /* transition: border 0.5s ease-in-out; */
+}
+
+#intro>button:hover {
+    background-color: rgb(67, 112, 164);
+
+}
+
+#intro>button:active {
+    background-color: rgb(85, 137, 198);
+    border: 1.5px solid white;
+    border: 1.5px solid white;
+
+}
+
+#intro h2>img {
+    height: 45px;
+    /* border: 2px solid white; */
+}
+
+
+
+#get-started>img {
+    height: 400px;
+}
+
+#logo-container {
+    height: 100%;
+    width: fit-content;
+    gap: 10px;
+    font-size: 25px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Lobster Two", sans-serif;
+    /* font: weight 900; */
+}
+
+#nextStepLogo {
+    height: 40px;
+}
+
+nav ul {
+    height: 100%;
+    /* border: 2px solid red; */
+    width: fit-content;
+    display: flex;
+    /* justify-content: center; */
+
+}
+
+nav li {
+    list-style-type: none;
+    ;
+    /* border: 2px solid black; */
+    padding: 0px 15px;
+    align-content: center;
+}
+
+
+
+nav li:focus-visible {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+
+
+nav li:hover {
+    background-color: rgb(65, 119, 180,0.8);
+    border-bottom: 2px solid white;
+
+    a {
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+    }
+}
+
+nav li>a {
+    /* border: 2px solid white; */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    height: 100%;
+}
+
+nav li>a:focus {
+    color: rgb(0, 0, 0, 0.8);
+}
+
+/* #login>a:hover {
+    color: #000000;
+} */
+
+
+
+#link-list {
+    display: flex;
+}
+
+main {
+    height: fit-content;
+    width: 100vw;
+    /* font-size: 100px; */
+    text-align: center;
+}
+
+main h1 {
+    margin-bottom: 50px;
+    font-size: 4rem;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+}
+
+main h1 b {
+    font-size: 4rem;
+    font-weight: 500px;
+}
+
+
+.nextStep-intro {
+    align-content: center;
+    background-color: white;
+    /* border: 2px solid yellow; */
+    height: 100vh;
+    text-align: center;
+}
+
+.nextStep-intro p {
+    width: 60vw;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    word-spacing: 2px;
+}
+
+.nextStep-intro strong {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: roboto;
+
+}
+
+.nextStep-features {
+    align-content: space-evenly;
+    justify-items: center;
+    /* border: 2px solid green; */
+    background-color: white;
+    height: max-content;
+    padding-bottom: 100px;
+}
+
+.feature-card-container {
+    /* border: 2px solid black; */
+    width: 80%;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.feature-card {
+    /* color: white; */
+    padding: 30px;
+    width: 30%;
+    height: 100%;
+    justify-items: center;
+    display: inline-block;
+    align-content: center;
+
+    border-radius: 20px;
+    color: white;
+    /* border: 2px solid orange; */
+    background-color: #5685c7;
+    transition: all 0.5s ease-in;
+}
+
+.feature-card:hover {
+    transform: scale(1.03);
+    box-shadow: 20px 20px 10px rgb(139, 136, 136);
+}
+
+.feature-card h2 a {
+    /* border: 2px solid wheat; */
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    /* margin-bottom: 100px; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.feature-card h2 {
+    margin-bottom: 20px;
+}
+
+.feature-card h2 a:hover {
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.feature-card p {
+    font-size: 1.15rem;
+    width: 92%;
+    /* word-spacing: 0px; */
+    /* border: 2px solid wheat; */
+    height: fit-content;
+    text-align:justify;
+    font-family: "roboto";
+}
+
+.nextStep-team {
+    /* border: 2px solid yellow; */
+    height: 110vh;
+    background-color: white;
+    padding-bottom: 150px;
+}
+
+.nextStep-team h1 {
+    /* border: 2px solid green; */
+    margin: 0;
+}
+
+.nextStep-team h2 {
+    /* margin-bottom: 50px; */
+    /* border: 2px solid black; */
+    /* display: inline; */
+    /* padding-right: 40px; */
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+
+    /* justify-content: center; */
+}
+
+.team-members-container {
+    /* border: 2px solid black; */
+    /* background-color: yellow; */
+
+    margin: 50px auto;
+    display: flex;
+    width: 60%;
+    height: 85%;
+    justify-content: space-evenly;
+}
+
+.team-member-cards01 {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.team-member-cards02 {
+    width: 50%;
+    height: 100%;
+    /* border: 5px solid yellow; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 15px;
+    column-gap: 50px;
+}
+
+.team-member-cards03 {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.member-card {
+    display: block;
+    /* border: 5px solid red; */
+    height: 150px;
+    width: 150px;
+    /* background-color: black; */
+    /* z-index: 0; */
+}
+
+.member-card img {
+    position: relative;
+    height: 10px;
+    height: 170px;
+    /* width: 150px; */
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+    filter:grayscale(10);
+    
+}
+
+.member-card img:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgb(114, 114, 114);
+    filter:saturate(1);
+
+}
+
+footer{
+    height: 25vh;
+    background-color: rgb(85, 137, 198,0.7);
+    overflow-y: hidden;
+
+    
+}
+
+.list-container
+{
+    display: flex;
+    height: 85%;
+    width: 100%;
+    font-family: "roboto";
+    color: rgb(255, 255, 255,0.9);
+    
+}
+
+.list-container h3
+{
+    /* color: white; */
+    margin-bottom: 15px;
+    display: inline;
+    font-size: 1.2rem;
+    /* margin:10px 0px 0px 40px; */
+    font-weight: 600;
+}
+
+.list-container ul
+{
+    /* margin:10px 0px 0px 40px; */
+    list-style-type: none;
+}
+
+.list-container ul li a
+{
+    color: rgb(255, 255, 255,0.9);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.list-container ul li a:hover
+{
+    color: hsl(0, 0%, 0%,90%);
+}
+
+.Support
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left:70px;
+    padding-top: 25px;
+    /* border:2px solid black; */
+    width: 17%;
+    /* background-color: black; */
+}
+
+.Explore
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 70px;
+    padding-top: 25px;
+    /* border:2px solid black; */
+    width: 17%;
+    /* background-color: white; */
+    
+}
+
+.Profile
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 70px;
+    padding-top: 25px;
+    /* border:2px solid black; */
+    width: 17%;
+    
+}
+
+.nextsteplogo-footer
+{
+    height: 120%;
+    width: calc(100% - 51%);
+    align-content: center;
+}
+
+.nextsteplogo-footer-container img
+{
+    height: 145px;
+}
+
+.nextsteplogo-footer-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    /* border: 2px solid blue; */
+}
+
+.nextsteplogo-footer-container h1{
+    font-size: 5rem;
+    width: 80%;
+}
+
+#nextstep-intro-footer h2
+{
+    width: 90%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+
+#nextstep-intro-footer h1
+{
+    font-size: 2.8rem;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+#nextstep-intro-footer h2
+{
+    font-size: 1.2rem;
+    font-family: "Lobster Two", sans-serif;
+}
+
+#nextstep-intro-footer h2
+{
+    align-items: center;
+}
+
+#nextstep-intro-footer h2 img{
+    height: 30px;
+}
+
+.copywright-contacts
+{
+    display: flex;
+    /* background-color: black; */
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+    font-size: 0.9ref;
+}
+
+#contacts img
+{
+    margin-left: 5px;
+  height: 20px;
+}

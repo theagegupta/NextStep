@@ -1,0 +1,132 @@
+
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Main container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+/* Header text */
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* User type section */
+.user-type {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.user-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Images for student and professional */
+.user-option img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Example: Set specific images for student and professional */
+.user-option.student img {
+    content: url('images/student.png'); /* Path to student image */
+}
+
+.user-option.professional img {
+    content: url('images/professional.png'); /* Path to professional image */
+}
+
+/* Text for user options */
+.user-option p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Hover effect for user option */
+.user-option:hover {
+    transform: scale(1.1);
+}
+
+/* Logo button */
+.logo button {
+    background-color: #0056b3;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logo button:hover {
+    background-color: #003d82;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.footer .underline {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.footer .underline:hover {
+    border-bottom: 2px solid #ffffff;
+    color: #ffd700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .user-type {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .user-option img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo button {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}

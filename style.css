@@ -63,7 +63,24 @@ header {
     gap: 30px;
     width: fit-content
 }
+/* Get Started button styling */
+#get-started button {
+    background-color: rgb(85, 137, 198, 0.95); /* Blue background color */
+    color: white; /* White text */
+    font-size: 1.0rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth scaling and color change transition */
+}
 
+/* Hover effect for the button */
+#get-started button:hover {
+    background-color: #003d82; /* Darker blue shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
 
 #intro {
     text-align: left;

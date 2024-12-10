@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextStep Q&A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Color Palette */
+        :root {
+            --primary-color: #5589C6; /* Blue */
+            --secondary-color: #000000; /* Black */
+            --accent-color: #FFFFFF; /* White */
+            --highlight-color: #BE8A60; /* Beige */
+            --neutral-color: #4B6858; /* Dark Greenish */
+            --dark-background: #1a1a1a;
+            --dark-text: #e6e6e6;
+            --green-color: #4CAF50; /* Green */
+            --red-color: #F44336; /* Red */
+            --blue-color: #2196F3; /* Blue */
+        }
+
+        .bg-career-pattern {
+            background-image: url("webpage\ bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Override Tailwind default colors */
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .bg-accent {
+            background-color: var(--accent-color);
+        }
+
+        .bg-highlight {
+            background-color: var(--highlight-color);
+        }
+
+        .bg-neutral {
+            background-color: var(--neutral-color);
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .text-secondary {
+            color: var(--secondary-color);
+        }
+
+        .text-accent {
+            color: var(--accent-color);
+        }
+
+        .text-highlight {
+            color: var(--highlight-color);
+        }
+
+        .text-neutral {
+            color: var(--neutral-color);
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: var(--dark-background);
+            color: var(--dark-text);
+        }
+
+        .dark-mode .bg-primary {
+            background-color: #333;
+        }
+
+        .dark-mode .bg-accent {
+            background-color: #444;
+        }
+
+        .dark-mode .bg-highlight {
+            background-color: #666;
+        }
+
+        .dark-mode .bg-neutral {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body class="font-sans bg-career-pattern bg-accent min-h-screen p-4" id="body">
+    <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
+        <header class="bg-primary text-accent p-4 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <img src=""  class="w-full h-full object-cover" />
+            </div>
+            <div class="container mx-auto flex justify-between items-center relative z-10">
+                <h1 class="text-2xl font-bold">NextStep Q&A</h1>
+                <button id="menuToggle" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <button id="darkModeToggle" class="text-accent p-2 bg-primary rounded hover:bg-highlight">🌙</button>
+                <nav id="mainNav" class="hidden md:block">
+                    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                        <li><a href="#" class="block hover:text-highlight hover:underline transition duration-300">Home</a></li>
+                        <li><a href="#ask-question" class="block hover:text-highlight hover:underline transition duration-300">Ask a Question</a></li>
+                        <li><a href="#browse-questions" class="block hover:text-highlight hover:underline transition duration-300">Browse Questions</a></li>
+                        <li><a href="#about-us" class="block hover:text-highlight hover:underline transition duration-300">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-6">
+            <!-- Search Bar -->
+            <input type="text" id="searchBar" placeholder="Search questions..." class="w-full p-2 border rounded mb-4" onkeyup="searchQuestions()">
+
+            <section class="bg-gradient-to-r from-accent to-highlight p-6 rounded-lg shadow border border-gray-200 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-0">
+                    <img src="/api/placeholder/400/320" alt="Career path" class="w-full h-full object-cover" />
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-4 text-primary">Welcome to NextStep Q&A</h2>
+                    <p class="text-secondary">Get expert advice on your career questions. Browse existing Q&As or ask your own question!</p>
+                </div>
+            </section>
+
+            <section id="ask-question" class="bg-gradient-to-r from-highlight to-neutral p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-2xl font-bold mb-4 text-primary">Ask a Question</h2>
+                <form id="questionForm" class="space-y-4">
+                    <input type="text" id="questionTitle" placeholder="Your question title" class="w-full p-2 border rounded" required>
+                    <textarea id="questionBody" placeholder="Describe your question in detail" class="w-full p-2 border rounded" rows="4" required></textarea>
+                    <input type="text" id="tags" placeholder="Add tags (comma separated)" class="w-full p-2 border rounded">
+                    <button type="submit" class="bg-primary text-accent px-4 py-2 rounded hover:bg-highlight">Submit Question</button>
+                </form>
+            </section>
+
+            <section id="browse-questions" class="bg-gradient-to-r from-neutral to-accent p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-2xl font-bold mb-4 text-primary">Recent Questions</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Unanswered Questions</h3>
+                        <ul id="unansweredQuestions" class="space-y-2">
+                            <!-- Unanswered questions will be dynamically added here -->
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Answered Questions</h3>
+                        <ul id="answeredQuestions" class="space-y-2">
+                            <!-- Answered questions will be dynamically added here -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="about-us" class="bg-primary text-accent p-4 mt-8 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-0">
+                <img src="/api/placeholder/400/320" alt="Career success" class="w-full h-full object-cover" />
+            </div>
+            <div class="container mx-auto text-center relative z-10">
+                <p>&copy; 2024 NextStep Q&A. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('hidden');
+        });
+
+        // Dark Mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.getElementById('body');
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        // Sample questions and answers
+        let questions = [
+            { id: 1, title: "How to switch careers?", body: "I'm considering switching from marketing to data science. Any advice?", tags: ["career", "data science"], answered: false },
+            { id: 2, title: "Best resources for learning programming?", body: "I want to learn programming. What are the best online resources?", tags: ["programming", "resources"], answered: true, answer: "There are many great resources available. Some popular ones include freeCodeCamp, Codecademy, and Coursera.", likes: 0, dislikes: 0 },
+            { id: 3, title: "Tips for a successful job interview?", body: "I have an important job interview next week. What are some tips to succeed?", tags: ["interview", "job"], answered: true, answer: "Practice common interview questions, research the company, and dress appropriately.", likes: 0, dislikes: 0 }
+        ];
+
+        // Render questions on page load
+        function renderQuestions() {
+            const unansweredList = document.getElementById('unansweredQuestions');
+            const answeredList = document.getElementById('answeredQuestions');
+            
+            unansweredList.innerHTML = '';
+            answeredList.innerHTML = '';
+            
+            questions.forEach((q) => {
+                const li = document.createElement('li');
+                li.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow', 'flex', 'flex-col');
+                const tags = q.tags.map(tag => `<span class="bg-accent text-primary px-2 py-1 rounded-full text-xs">${tag}</span>`).join(' ');
+                li.innerHTML = `
+                    <h4 class="text-xl font-semibold text-primary">${q.title}</h4>
+                    <p class="text-secondary">${q.body}</p>
+                    <div class="mt-2">${tags}</div>
+                    <div class="flex justify-between mt-2">
+                        <div>
+                            <button class="likeBtn bg-green-500 text-accent px-2 py-1 rounded">👍 Like (${q.likes || 0})</button>
+                            <button class="dislikeBtn bg-red-500 text-accent px-2 py-1 rounded">👎 Dislike (${q.dislikes || 0})</button>
+                        </div>
+                        <button class="answerBtn bg-green-500 text-accent px-2 py-1 rounded">Answer</button>
+                        <button class="shareBtn bg-blue-500 text-accent px-2 py-1 rounded">🔗 Share</button>
+                    </div>
+                `;
+                if (q.answered) {
+                    const answer = document.createElement('p');
+                    answer.classList.add('mt-2', 'text-neutral', 'italic');
+                    answer.textContent = `Answer: ${q.answer}`;
+                    li.appendChild(answer);
+                    answeredList.appendChild(li);
+                } else {
+                    unansweredList.appendChild(li);
+                }
+
+                // Voting functionality
+                li.querySelector('.likeBtn').addEventListener('click', () => {
+                    q.likes++;
+                    renderQuestions();
+                });
+
+                li.querySelector('.dislikeBtn').addEventListener('click', () => {
+                    q.dislikes++;
+                    renderQuestions();
+                });
+
+                // Answer functionality
+                const answerBtn = li.querySelector('.answerBtn');
+                if (answerBtn) {
+                    answerBtn.addEventListener('click', () => {
+                        const answer = prompt("Please provide an answer:");
+                        if (answer) {
+                            q.answer = answer;
+                            q.answered = true;
+                            renderQuestions();
+                        }
+                    });
+                }
+
+                // Share functionality
+                const shareBtn = li.querySelector('.shareBtn');
+                if (shareBtn) {
+                    shareBtn.addEventListener('click', () => {
+                        alert('Share functionality coming soon!');
+                    });
+                }
+            });
+        }
+
+        // Search functionality
+        function searchQuestions() {
+            const filter = document.getElementById("searchBar").value.toUpperCase();
+            const unansweredList = document.getElementById('unansweredQuestions');
+            const answeredList = document.getElementById('answeredQuestions');
+            
+            const allQuestions = [...unansweredList.getElementsByTagName("li"), ...answeredList.getElementsByTagName("li")];
+
+            allQuestions.forEach((li) => {
+                const title = li.querySelector("h4").textContent;
+                if (title.toUpperCase().indexOf(filter) > -1) {
+                    li.style.display = "";
+                } else {
+                    li.style.display = "none";
+                }
+            });
+        }
+
+        // Initialize the page
+        renderQuestions();
+    </script>
+</body>
+</html>

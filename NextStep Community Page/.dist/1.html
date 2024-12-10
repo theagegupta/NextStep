@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextStep Q&A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('webpage bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">NextStep Q&A</h1>
+            <nav>
+                <button id="menuToggle" class="text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-blue-500 text-white">
+        <ul class="container mx-auto py-4">
+            <li class="py-2 border-b border-blue-400"><a href="#" class="block">Home</a></li>
+            <li class="py-2 border-b border-blue-400"><a href="#" class="block">Categories</a></li>
+            <li class="py-2"><a href="#" class="block">My Profile</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8 grid md:grid-cols-4 gap-6">
+        <!-- Sidebar -->
+        <aside class="hidden md:block bg-white rounded-lg shadow-md p-4">
+            <h2 class="text-lg font-bold mb-4">Categories</h2>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-blue-600 hover:underline">Career Advice</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Programming Tips</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Interview Prep</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Section -->
+        <section class="col-span-3 space-y-6">
+            <!-- Welcome Section -->
+            <section class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4">Welcome to NextStep Q&A</h2>
+                <p class="text-gray-700">Get expert advice on your career questions. Browse existing Q&As or ask your own question!</p>
+            </section>
+
+            <!-- Ask a Question -->
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-2xl font-bold text-purple-600 mb-4">Ask a Question</h2>
+                <form id="questionForm" class="space-y-4">
+                    <input type="text" id="questionTitle" placeholder="Your question title" class="w-full p-2 border rounded" required>
+                    <textarea id="questionBody" placeholder="Describe your question in detail" class="w-full p-2 border rounded" rows="4" required></textarea>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit Question</button>
+                </form>
+            </section>
+
+            <!-- Recent Questions -->
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-2xl font-bold text-blue-600 mb-4">Recent Questions</h2>
+                <div class="space-y-4" id="questionList">
+                    <!-- Questions dynamically added here -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
+        <div class="container mx-auto text-center">
+            &copy; 2024 NextStep Q&A. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Question list management
+        const questionList = document.getElementById('questionList');
+        const questionForm = document.getElementById('questionForm');
+
+        const questions = [
+            { title: "How to switch careers?", body: "Advice for transitioning into a new field?", answered: false },
+            { title: "Resources for learning Python?", body: "Best beginner-friendly resources?", answered: true, answer: "Try freeCodeCamp or Codecademy!" }
+        ];
+
+        function renderQuestions() {
+            questionList.innerHTML = questions.map(q => `
+                <div class="p-4 border rounded shadow">
+                    <h3 class="font-bold">${q.title}</h3>
+                    <p>${q.body}</p>
+                    ${q.answered ? `<p class="text-green-600 mt-2">Answer: ${q.answer}</p>` : ""}
+                </div>
+            `).join('');
+        }
+
+        questionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const title = document.getElementById('questionTitle').value;
+            const body = document.getElementById('questionBody').value;
+            questions.push({ title, body, answered: false });
+            renderQuestions();
+            questionForm.reset();
+        });
+
+        renderQuestions();
+    </script>
+</body>
+</html>

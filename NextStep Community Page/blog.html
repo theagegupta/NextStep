@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextStep Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .glass {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .article-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+      }
+
+      .article-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.15);
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-up {
+        animation: fadeUp 0.5s ease-out forwards;
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #5589C6;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+
+      /* Hover effect for images */
+      .article-card img {
+        transition: transform 0.3s ease;
+      }
+
+      .article-card:hover img {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-white to-gray-100 min-h-screen">
+    <header class="glass fixed top-0 left-0 right-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-semibold text-[#5589C6]">NextStep Blog</h1>
+          <nav>
+            <ul class="flex space-x-8">
+              <li>
+                <a
+                  href="./CommunityPage.html"
+                  class="nav-link text-gray-800/80 hover:text-[#5589C6] transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-gray-800/80 hover:text-[#5589C6] transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-gray-800/80 hover:text-[#5589C6] transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pt-24 pb-16">
+      <div id="articles-container" class="grid gap-12">
+        <!-- Articles will be inserted here by JavaScript -->
+      </div>
+    </main>
+
+    <footer class="glass mt-auto py-8">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-gray-600 text-sm">
+          © <span id="current-year"></span> NextStep Blog. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const articles = [
+        {
+          title: "How to prepare for a job interview?",
+          category: "Career Tips",
+          excerpt:
+            "Master the art of job interviews with our comprehensive guide to preparation and success.",
+          image:
+            "https://storage.googleapis.com/a1aa/image/sC_cnLLXgnbPsr97h8IvdptHExHCV6KEMWVKivMcQzY.jpg",
+          imageAlt:
+            "A detailed illustration of a person preparing for a job interview",
+          tips: [
+            "Research the company and role thoroughly",
+            "Practice common interview questions",
+            "Dress appropriately and professionally",
+            "Bring extra copies of your resume",
+            "Arrive early and maintain positive body language"
+          ],
+          conclusion:
+            "Remember, preparation and confidence are key to interview success."
+        },
+        {
+          title: "Best online courses for career growth",
+          category: "Education",
+          excerpt:
+            "Discover the most impactful online courses that can accelerate your career progression.",
+          image:
+            "https://storage.googleapis.com/a1aa/image/chEyWzKdwmEU8Dw7Q6L_ITGq-L1kBxvYrHRgLg5CS_Y.jpg",
+          imageAlt:
+            "A detailed illustration of various online course platforms",
+          tips: [
+            "Coursera: University-level courses",
+            "Udemy: Practical skill development",
+            "LinkedIn Learning: Professional skills",
+            "edX: Academic excellence",
+            "freeCodeCamp: Coding mastery"
+          ],
+          conclusion:
+            "Invest in yourself through continuous learning and skill development."
+        },
+        {
+          title: "Networking tips for professionals",
+          category: "Professional Development",
+          excerpt:
+            "Learn effective strategies to build and maintain a valuable professional network.",
+          image:
+            "https://storage.googleapis.com/a1aa/image/n3vN3l8c0DpAIwhsgdJqzTBysyZ7xVZT13ppj3IF5-0.jpg",
+          imageAlt:
+            "A detailed illustration of professionals networking",
+          tips: [
+            "Attend industry events regularly",
+            "Maintain an active LinkedIn presence",
+            "Join professional organizations",
+            "Follow up with new connections",
+            "Provide value to your network"
+          ],
+          conclusion:
+            "Strong networks are built on authentic relationships and mutual support."
+        },
+        {
+          title: "Resume writing best practices",
+          category: "Career Development",
+          excerpt:
+            "Create a compelling resume that highlights your achievements and potential.",
+          image:
+            "https://storage.googleapis.com/a1aa/image/KcaJUGLioYcPHzwXMsch7L_sYLhpG9DvNGJ4JH3oTaI.jpg",
+          imageAlt:
+            "A detailed illustration of a well-crafted resume",
+          tips: [
+            "Tailor your resume to each position",
+            "Use action verbs and quantify achievements",
+            "Keep design clean and professional",
+            "Include relevant keywords",
+            "Proofread thoroughly"
+          ],
+          conclusion:
+            "Your resume is your personal marketing tool - make it count."
+        }
+      ];
+
+      function createArticleHTML(article) {
+        const articleId = article.title.replace(/\s+/g, '-').toLowerCase();
+        return `
+          <article id="${articleId}" class="opacity-0 article-card bg-white rounded-2xl shadow-sm overflow-hidden">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div class="relative h-64 md:h-full">
+                <img
+                  src="${article.image}"
+                  alt="${article.imageAlt}"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <div class="p-8">
+                <span class="inline-block px-4 py-1 rounded-full bg-gray-100 text-sm font-medium text-[#5589C6] mb-4">
+                  ${article.category}
+                </span>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                  ${article.title}
+                </h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  ${article.excerpt}
+                </p>
+                <ul class="space-y-3 mb-6">
+                  ${article.tips.map(
+                    tip => `
+                    <li class="flex items-start">
+                      <span class="text-[#5589C6] mr-2">•</span>
+                      <span class="text-gray-700">${tip}</span>
+                    </li>
+                  `
+                  ).join('')}
+                </ul>
+                <p class="text-gray-500 text-sm italic">
+                  ${article.conclusion}
+                </p>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      function initializeArticles() {
+        const container = document.getElementById('articles-container');
+        
+        articles.forEach(article => {
+          container.insertAdjacentHTML('beforeend', createArticleHTML(article));
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-up');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '50px'
+          }
+        );
+
+        document.querySelectorAll('.article-card').forEach(card => {
+          observer.observe(card);
+        });
+      }
+
+      function highlightArticle() {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+          const article = document.getElementById(hash);
+          if (article) {
+            article.classList.add('bg-yellow-100');
+            article.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      }
+
+      // Update copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initializeArticles();
+        highlightArticle();
+      });
+    </script>
+  </body>
+</html>

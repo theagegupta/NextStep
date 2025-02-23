@@ -4,37 +4,37 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+    /* margin: 0;
+    padding: 0; */
+    /* font-size: 16px; */
 }
 
 body {
     background: url(images/background.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     background-attachment: fixed;
-    overflow-x: hidden;
+    /* background-repeat: no-repeat; */
+    /* overflow-x: hidden; */
 }
 
 nav {
     /* border: 2px solid black; */
-    position:fixed;
-    z-index:1;
-    width: 100vw;
-    height: 50px;
-    color: white;
-    background: 10px solid white;
-    display: flex;
-    background-color: rgb(85, 137, 198, 0.95);
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-    padding-right: 50px;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    ;
+    /* position:fixed; */
+    /* z-index:1; */
+    /* width: 100vw; */
+    /* height: 50px; */
+    /* color: white; */
+    /* background: 10px solid white; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* gap:30%; */
+    /* font-size: 18px; */
+    /* font-family: "Roboto", sans-serif; */
+    /* background-color: rgb(54, 96, 146); */
+    /* padding-left: 20px;
+    padding-right: 50px; */
 }
 
 #profile-icon:hover
@@ -44,93 +44,87 @@ nav {
 
 header {
     /* border: 2px solid yellow; */
-    height: fit-content;
+    /* height: fit-content; */
     /* justify-items: center; */
 }
 
-.get-started-container {
-    height: 100vh;
+/* .get-started-container { */
+    /* height: 100vh; */
+
     /* border: 2px solid white; */
     /* text-align: center; */
-    align-content: center;
-}
+    /* align-content: center; */
+/* } */
 
 #get-started {
-    display: flex;
-    margin: 0 auto;
-    /* border: 2px solid red; */
-    height: fit-content;
-    gap: 30px;
-    width: fit-content
+    /* display: flex; */
+    /* margin: 0 auto; */
+    /* border: 5px solid red; */
+    /* height: fit-content; */
+    /* gap: 30px; */
+    /* width: fit-content */
 }
 /* Get Started button styling */
 #get-started button {
-    background-color: rgb(85, 137, 198, 0.95); /* Blue background color */
-    color: white; /* White text */
-    font-size: 1.0rem; /* Font size */
-    font-weight: bold; /* Bold text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth scaling and color change transition */
-}
-
-/* Hover effect for the button */
-#get-started button:hover {
-    background-color: #003d82; /* Darker blue shade on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    /* background-color: rgb(54, 95, 145); */
+    /* color: white;  */
+    /* font-size: 1.0rem;  */
+    /* font-weight: bold;  */
+    /* border: none;  */
+    /* border-radius: 5px;  */
+    /* cursor: pointer;  */
+    /* padding: 5px 10px;  */
 }
 
 #intro {
-    text-align: left;
+    /* text-align: left; */
     /* border: 2px solid white; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
 
 #intro h1 {
     /* border: 2px solid blue; */
-    font-size: 6.1rem;
-    color: white;
+    /* font-size: 6.1rem; */
+    /* color: white; */
+    /* line-height: 90px; */
     font-family: "Poppins", sans-serif;
-    line-height: 120px;
 }
 
 #intro h2 {
     /* border: 2px solid yellow; */
-    margin: 0;
-    padding: 0;
-    height: fit-content;
-    font-size: 2.2rem;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* height: fit-content; */
+    /* font-size: 2.2rem; */
     font-family: "Lobster Two";
     /* font-style: italic; */
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 5px; */
 
     /* line-height: ; */
 }
 
 #intro>button {
-    margin-top: 20px;
-    font-size: 1rem;
-    width: 100px;
-    padding: 8px 3px;
+    /* margin-top: 20px; */
+    /* font-size: 1rem; */
+    /* width: 100px; */
+    /* padding: 8px 3px; */
 
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    color: white;
-    background-color: rgb(85, 137, 198, 0.7);
+    /* font-weight: 600; */
+    /* color: white; */
+    /* background-color: rgb(85, 137, 198, 0.7); */
     /* border: 1.5px solid white; */
-    border: none;
-    font-style: normal;
-    transition: all 0.2s ease;
+    /* border: none; */
+    /* font-style: normal; */
+    /* transition: all 0.2s ease; */
     /* transition: border 0.5s ease-in-out; */
+    font-family: "Roboto", sans-serif;
 }
 
-#intro>button:hover {
+/* #intro>button:hover {
     background-color: rgb(67, 112, 164);
 
 }
@@ -140,35 +134,26 @@ header {
     border: 1.5px solid white;
     border: 1.5px solid white;
 
-}
+} */
 
 #intro h2>img {
-    height: 45px;
+    /* height: 45px; */
     /* border: 2px solid white; */
 }
 
-
-
-#get-started>img {
-    height: 400px;
-}
-
 #logo-container {
-    height: 100%;
+    /* height: 100%;
     width: fit-content;
-    gap: 10px;
-    font-size: 25px;
+    gap: 10px; */
+    /* font-size: 25px; */
     /* border: 2px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Lobster Two", sans-serif;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
     /* font: weight 900; */
+    font-family: "Roboto";
 }
 
-#nextStepLogo {
-    height: 40px;
-}
 
 nav ul {
     height: 100%;

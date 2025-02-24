@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>NextStep User Profile</title>
+    <script src="./ProfilePage.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -16,14 +17,17 @@
                </video>
             </div>
             <div class="user-details">
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" id="name">
                 <select name="Working-Details" id="working-details">
                     <option value="student">Student</option> 
                     <option value="professional">Professional</option>
                 </select>
-                <input type="text" placeholder="Education">
+                <input type="text" placeholder="Education" id="education">
+                <input type="text" placeholder="University" id="university">
                 <input type="text" placeholder="Mobile Number">
                 <input type="text" placeholder="Email Address">
+                <input type="text" placeholder="Interests" id="interests">
+                <input type="submit" id="submitBtn" value="Save">
             </div>
         </div>
 
@@ -31,10 +35,10 @@
         <div class="right-section">
             <h3>User Profile</h3>
             <div class="profile-overview">
-                <span>Name</span>
-                <span>Education</span>
-                <span>University</span>
-                <span>Interests</span>
+                <span id="displayName">Name</span>
+                <span id="displayEducation">Education</span>
+                <span id="displayUniversity">University</span>
+                <span id="displayInterests">Interests</span>
             </div>
         </div>
     </div>

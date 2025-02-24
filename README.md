@@ -1,1 +1,1 @@
-index.html - contains the hope page of NextStep
+index.html - contains the home page of NextStep

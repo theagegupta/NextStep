@@ -3,50 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - NEXTSTEP</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
+    <title>NextStep - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Login Modal -->
     <div class="login-container">
         <div class="login-box">
-            <button class="close-btn">&times;</button>
+            <span class="close-btn">&times;</span>
             <h2>Welcome to NEXTSTEP</h2>
             <p>Join / Sign In using</p>
 
-            <div class="social-login">
-                <button class="facebook-btn"> 
-                    <img src="./facebook-icon.png" alt="Facebook"> FACEBOOK
-                </button>
-                <button class="google-btn"> 
-                    <img src="./google-icon.png" alt="Google"> GOOGLE
-                </button>
+            <!-- Google Sign-In Button -->
+            <div id="g_id_onload"
+                data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleGoogleLogin"
+                data-auto_prompt="false">
+            </div>
+            <div class="social-buttons">
+                <div class="google-btn" id="googleBtn">
+                    <img src="images/google-icon.png" alt="Google Icon"> GOOGLE
+                </div>
+
+                <!-- Facebook Sign-In Button -->
+                <div class="facebook-btn" id="facebookBtn">
+                    <img src="images/facebook-icon.png" alt="Facebook Icon"> FACEBOOK
+                </div>
             </div>
 
-            <div class="divider">
-                <span>Or</span>
-            </div>
+            <div class="divider">Or</div>
 
             <label for="mobile">Enter Mobile Number *</label>
-            <input type="text" id="mobile" placeholder="Enter your mobile number">
+            <input type="tel" id="mobile" placeholder="Enter Mobile Number" required>
 
             <button id="continueBtn">CONTINUE</button>
 
             <p class="terms">
-                By Signing In, I agree to 
-                <a href="#">Terms & Conditions</a> and 
-                <a href="#">Privacy Policy</a>.
+                By Signing In, I agree to <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
             </p>
-
-            <div class="email-info">
-                <img src="./email-icon.png" alt="Email">
-                Email-based login is no longer available. 
-                Please <a href="#">click here</a> to restore your mobile number.
-            </div>
         </div>
     </div>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

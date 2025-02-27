@@ -1,40 +1,64 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const closeBtn = document.querySelector(".close-btn");
+    // Get buttons
+    const googleBtn = document.getElementById("googleBtn");
+    const facebookBtn = document.getElementById("facebookBtn");
     const continueBtn = document.getElementById("continueBtn");
-    const mobileInput = document.getElementById("mobile");
-    const googleBtn = document.querySelector(".google-btn");
-    const facebookBtn = document.querySelector(".facebook-btn");
 
-    // Load saved mobile number
-    if (localStorage.getItem("savedMobile")) {
-        mobileInput.value = localStorage.getItem("savedMobile");
+    // Google Login
+    window.handleGoogleLogin = function (response) {
+        console.log("Google Login Successful!", response);
+        alert("Logged in with Google!");
+        redirectToNextPage();
+    };
+
+    // Facebook Login
+    function checkFacebookLoginState() {
+        FB.getLoginStatus(function (response) {
+            if (response.status === "connected") {
+                alert("Logged in with Facebook!");
+                redirectToNextPage();
+            } else {
+                FB.login(function (response) {
+                    if (response.status === "connected") {
+                        alert("Logged in with Facebook!");
+                        redirectToNextPage();
+                    }
+                }, { scope: "email,public_profile" });
+            }
+        });
     }
 
-    // Close modal
-    closeBtn.addEventListener("click", function () {
-        document.querySelector(".login-container").style.display = "none";
+    // Initialize Facebook SDK
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: "YOUR_FACEBOOK_APP_ID",
+            cookie: true,
+            xfbml: true,
+            version: "v13.0"
+        });
+    };
+
+    // Google Button Click Event
+    googleBtn.addEventListener("click", function () {
+        google.accounts.id.prompt();
     });
 
-    // Save Mobile Number and Redirect to loginpage1.html
-    continueBtn.addEventListener("click", function () {
-        const mobileNumber = mobileInput.value.trim();
+    // Facebook Button Click Event
+    facebookBtn.addEventListener("click", function () {
+        checkFacebookLoginState();
+    });
 
-        if (mobileNumber.length >= 10 && /^[0-9]+$/.test(mobileNumber)) {
-            localStorage.setItem("savedMobile", mobileNumber);
-            alert("Mobile number saved successfully!");
-            window.location.href = "loginpage1.html"; // Redirect to loginpage1.html
+    // Continue Button Redirect
+    continueBtn.addEventListener("click", function () {
+        let mobileNumber = document.getElementById("mobile").value;
+        if (mobileNumber.trim() === "") {
+            alert("Please enter your mobile number!");
         } else {
-            alert("Please enter a valid mobile number!");
+            redirectToNextPage();
         }
     });
 
-    // Redirect to Google Sign-In Page
-    googleBtn.addEventListener("click", function () {
-        window.location.href = "https://accounts.google.com/signin/v2/identifier?service=mail";
-    });
-
-    // Redirect to Facebook Sign-In Page
-    facebookBtn.addEventListener("click", function () {
-        window.location.href = "https://www.facebook.com/login/";
-    });
+    function redirectToNextPage() {
+        window.location.href = "loginpage1.html";
+    }
 });

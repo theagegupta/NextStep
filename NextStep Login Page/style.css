@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #02659f;
     color: white;
     display: flex;
     justify-content: center;
@@ -25,9 +25,9 @@ body {
 
 /* Header text */
 h1 {
-    margin: 0;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    margin: 10;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
 /* User type section */
@@ -36,7 +36,7 @@ h1 {
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .user-option {
@@ -44,7 +44,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    padding: 15px;
+    padding: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -69,7 +69,7 @@ h1 {
 /* Text for user options */
 .user-option p {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -78,26 +78,11 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Logo button */
-.logo button {
-    background-color: #0056b3;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.logo button:hover {
-    background-color: #003d82;
-}
 
 /* Footer */
 .footer {
-    margin-top: 20px;
-    font-size: 1rem;
+    margin-top: 0px;
+    font-size: 1.3rem;
 }
 
 .footer .underline {
@@ -126,7 +111,7 @@ h1 {
     }
 
     .logo button {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding: 8px 16px;
     }
 }

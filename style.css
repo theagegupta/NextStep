@@ -40,7 +40,7 @@ body {
 } 
 
 nav li:hover {
-    background-color: rgb(2, 101, 159);
+    background-color: #02659f;
     border-bottom: 1.6px solid white;
 
     a {

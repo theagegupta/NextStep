@@ -5,28 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>NextStep User Profile</title>
-    <script src="./ProfilePage.js"></script>
+    <script defer src="./ProfilePage.js"></script>
 </head>
 <body>
     <div class="main-container">
         <!-- Left Section: Profile Information -->
         <div class="left-section">
             <div class="profile-image">
-               <video class="profile-pic" autoplay>
-                <source src="./User Profile.mp4" type="video/mp4">
-               </video>
+                <video class="profile-pic" autoplay>
+                    <source src="./User Profile.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="user-details">
-                <input type="text" placeholder="Name" id="name">
-                <select name="Working-Details" id="working-details">
-                    <option value="student">Student</option> 
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="working-details">Working Details:</label>
+                <select id="working-details">
+                    <option value="student">Student</option>
                     <option value="professional">Professional</option>
                 </select>
-                <input type="text" placeholder="Education" id="education">
-                <input type="text" placeholder="University" id="university">
-                <input type="text" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Address">
-                <input type="text" placeholder="Interests" id="interests">
+
+                <label for="education">Education:</label>
+                <input type="text" id="education" placeholder="Enter your education">
+
+                <label for="university">University:</label>
+                <input type="text" id="university" placeholder="Enter your university">
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" placeholder="Enter your mobile number">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="interests">Interests:</label>
+                <input type="text" id="interests" placeholder="Enter your interests">
+
                 <input type="submit" id="submitBtn" value="Save">
             </div>
         </div>
@@ -38,6 +52,8 @@
                 <span id="displayName">Name</span>
                 <span id="displayEducation">Education</span>
                 <span id="displayUniversity">University</span>
+                <span id="displayMobile">Mobile Number</span>
+                <span id="displayEmail">Email</span>
                 <span id="displayInterests">Interests</span>
             </div>
         </div>

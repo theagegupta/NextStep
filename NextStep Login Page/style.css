@@ -1,117 +1,179 @@
-
-/* General body styles */
+/* General Styles */
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #02659f;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
+    margin: 0;
 }
 
-/* Main container styles */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 90%;
+/* Login Container */
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-
-/* Header text */
-h1 {
-    margin: 10;
-    font-size: 3rem;
-    margin-bottom: 30px;
-}
-
-/* User type section */
-.user-type {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+}
+
+/* Login Box */
+.login-box {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Headings */
+h2 {
+    color: #10689b;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.user-option {
+/* Social Login Buttons */
+.social-login {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.facebook-btn, .google-btn {
+    display: flex;
     align-items: center;
+    gap: 10px;
+    border: 2px solid #10689b;
+    background: white;
+    color: #10689b;
+    padding: 10px;
+    font-weight: bold;
     cursor: pointer;
-    padding: 50px;
-    transition: transform 0.3s ease;
+    border-radius: 5px;
+    width: 130px;
 }
 
-/* Images for student and professional */
-.user-option img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
+.google-btn {
+    border-color: red;
+    color: red;
 }
 
-/* Example: Set specific images for student and professional */
-.user-option.student img {
-    content: url('images/student.png'); /* Path to student image */
+/* Icons in Buttons */
+.facebook-btn img, .google-btn img {
+    width: 20px;
 }
 
-.user-option.professional img {
-    content: url('images/professional.png'); /* Path to professional image */
+/* Divider */
+.divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
-/* Text for user options */
-.user-option p {
+.divider span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    position: relative;
+}
+
+.divider span::before,
+.divider span::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+    top: 50%;
+}
+
+.divider span::before {
+    left: 0;
+}
+
+.divider span::after {
+    right: 0;
+}
+
+/* Input Field */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Continue Button */
+#continueBtn {
+    width: 100%;
+    background-color: #10689b;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+#continueBtn:hover {
+    background-color: #0a4e73;
+}
+
+/* Terms */
+.terms {
+    font-size: 12px;
     margin-top: 10px;
-    font-size: 1.5rem;
+    color: #555;
+}
+
+.terms a {
+    color: #10689b;
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Hover effect for user option */
-.user-option:hover {
-    transform: scale(1.1);
+/* Email Info Box */
+.email-info {
+    background: rgba(255, 223, 186, 0.7);
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
 }
 
-
-/* Footer */
-.footer {
-    margin-top: 0px;
-    font-size: 1.3rem;
+.email-info img {
+    width: 18px;
+    margin-right: 10px;
 }
 
-.footer .underline {
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s ease, color 0.3s ease;
-}
-
-.footer .underline:hover {
-    border-bottom: 2px solid #ffffff;
-    color: #ffd700;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .user-type {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .user-option img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .logo button {
-        font-size: 1.5rem;
-        padding: 8px 16px;
-    }
+.email-info a {
+    color: #10689b;
+    font-weight: bold;
 }

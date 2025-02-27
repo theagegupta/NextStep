@@ -3,28 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextStep Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login - NEXTSTEP</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Choose Your Path</h1>
-        <div class="user-type">
-            <div class="user-option student">
-                <img src="images/student.png" alt="Student">
-                <p>Student</p>
+
+    <!-- Login Modal -->
+    <div class="login-container">
+        <div class="login-box">
+            <button class="close-btn">&times;</button>
+            <h2>Welcome to NEXTSTEP</h2>
+            <p>Join / Sign In using</p>
+
+            <div class="social-login">
+                <button class="facebook-btn"> 
+                    <img src="./facebook-icon.png" alt="Facebook"> FACEBOOK
+                </button>
+                <button class="google-btn"> 
+                    <img src="./google-icon.png" alt="Google"> GOOGLE
+                </button>
             </div>
-            <div class="user-option professional">
-                <img src="images/professional.png" alt="Professional">
-                <p>Professional</p>
+
+            <div class="divider">
+                <span>Or</span>
+            </div>
+
+            <label for="mobile">Enter Mobile Number *</label>
+            <input type="text" id="mobile" placeholder="Enter your mobile number">
+
+            <button id="continueBtn">CONTINUE</button>
+
+            <p class="terms">
+                By Signing In, I agree to 
+                <a href="#">Terms & Conditions</a> and 
+                <a href="#">Privacy Policy</a>.
+            </p>
+
+            <div class="email-info">
+                <img src="./email-icon.png" alt="Email">
+                Email-based login is no longer available. 
+                Please <a href="#">click here</a> to restore your mobile number.
             </div>
         </div>
-        <div class="logo">
-        </div>
-        <div class="footer">
-            <p>Already Have An Account ? <span class="underline">Login</span></p>
-            <p><span class="underline">Need help?</span></p>
-        </div>
-    </div>    
+    </div>
+
 </body>
 </html>

@@ -155,13 +155,6 @@ main h1 b {
     /* justify-content: space-evenly; */
 }
 
-.team-member-cards01 {
-    /* border: 2px solid blue; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-evenly; */
-}
-
 .team-member-cards02 {
     width: 50%;
     /* height: 100%; */
@@ -173,13 +166,6 @@ main h1 b {
     /* justify-items: center; */
     /* row-gap: 40px; */
     /* column-gap: 40px; */
-}
-
-.team-member-cards03 {
-    /* border: 2px solid blue; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-evenly; */
 }
 
 .member-card {
@@ -211,160 +197,87 @@ main h1 b {
 
 
 footer{
-    height: fit-content;
-    background-color: rgb(85, 137, 198,0.7);
-    overflow-y: hidden;
+    height:fit-content;
+    padding: 20px 0 10px 0;
+    background-color: rgb(13, 97, 144,0.8);
 }
 
-.list-container
+.list-container ul  a
 {
-    display: flex;
-    height: 85%;
-    width: 100%;
-    font-family: "roboto";
-    color: rgb(255, 255, 255,0.9);
-}
-
-.list-container h3
-{
-    /* color: white; */
-    margin-bottom: 15px;
-    display: inline;
-    font-size: 1.2rem;
-    /* margin:10px 0px 0px 40px; */
-    font-weight: 600;
-}
-
-.list-container ul
-{
-    /* margin:10px 0px 0px 40px; */
-    list-style-type: none;
-}
-
-.list-container ul li a
-{
-    color: rgb(255, 255, 255,0.9);
+    color: white;
     text-decoration: none;
     font-size: 0.9rem;
+    transition: all 0.3s ease-in;
+    border:none;
+    /* border-left:1px solid white; */
+    &:hover
+    {
+        border-left:1px solid white;
+        color: rgb(244, 164, 34);
+        padding-left: 5px;
+        font-weight:500;
+    }
 }
 
-.list-container ul li a:hover
+.list-container ul li
 {
-    color: hsl(0, 0%, 0%,90%);
+    margin: 0;
+}
+
+#lists
+{
+    width: 70%;
+    /* border: 2px solid black; */
 }
 
 .Support
 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: flex-start;
-    padding-left:70px;
-    padding-top: 25px;
-    /* border:2px solid black; */
-    width: 17%;
-    /* background-color: black; */
+    margin-top: 10px;
+    margin-left: 70px;
+    width: 15%;
+
 }
 
 .Explore
 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: flex-start;
-    padding-left: 70px;
-    padding-top: 25px;
-    /* border:2px solid black; */
-    width: 17%;
-    /* background-color: white; */
-    
-}
+    margin-top: 10px;
+    margin-left: 70px;
+    width: 15%;
+} 
 
 .Profile
 {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: flex-start;
-    padding-left: 70px;
-    padding-top: 25px;
-    /* border:2px solid black; */
-    width: 17%;
-    
+    margin-top: 10px;
+    margin-left: 70px;
+    width:15%;    
 }
 
 .nextsteplogo-footer
 {
-    height: 120%;
-    width: calc(100% - 51%);
-    align-content: center;
+    /* border: 2px solid yellow; */
+    /* height: auto; */
+    width: 30%;
+    /* align-content: center; */
 }
 
 .nextsteplogo-footer-container img
 {
-    height: 145px;
-}
-
-.nextsteplogo-footer-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-    /* border: 2px solid blue; */
-}
-
-.nextsteplogo-footer-container h1{
-    font-size: 5rem;
-    width: 80%;
-}
-
-#nextstep-intro-footer h2
-{
-    width: 90%;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
+    
+    height:140px;
 }
 
 #nextstep-intro-footer h1
 {
-    font-size: 2.8rem;
+    /* font-size: 2.8rem; */
     font-family: "Poppins", sans-serif;
-    
 }
 
 #nextstep-intro-footer h2
 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     font-family: "Lobster Two", sans-serif;
 }
 
-#nextstep-intro-footer h2
-{
-    align-items: center;
-}
-
 #nextstep-intro-footer h2 img{
-    height: 30px;
-}
-
-.copywright-contacts
-{
-    display: flex;
-    /* background-color: black; */
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    padding:0px 20px;
-    font-size: 0.9ref;
-}
-
-#contacts img
-{
-    margin-left: 5px;
-  height: 20px;
+    height: 25px;
 }

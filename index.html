@@ -16,10 +16,10 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-center bg-cover bg-fixed overflow-x-hidden ">
+<body class="bg-center bg-cover bg-fixed overflow-x-hidden box-border">
     <header>
         <nav class="fixed z-10 w-full h-13 text-white flex items-center justify-between text-lg bg-sky-800 opacity-95 font-roboto pl-5 pr-10">
-            <span class="h-fit w-fit gap-2 flex items-center text-[22px]" id="logo-container">
+            <span class="h-fit w-fit gap-2 flex items-center text-2xl" id="logo-container">
                 <img src="images/nextStepLogo.png" class="h-9" id="nextStepLogo" alt="NextStep">NextStep
             </span>
             <ul id="link-list" class="h-full flex items-center">
@@ -50,12 +50,12 @@
         <div id="get-started" class="flex items-center gap-10 mx-auto h-fit w-fit ">
             <img class="h-80" src="images/nextStepLogo.png" alt="NextStep">
             <span id="intro" class="text-left ">
-                <h1 class="text-8xl font-poppins text-white leading-[90px]">NextStep</h1>
-                <h2 class="text-4xl font-lobster-two text-white flex items-center gap-2 m-0 p-0 h-fit">
+                <h1 class="text-8xl font-poppins text-white font-bold leading-[90px]">NextStep</h1>
+                <h2 class="text-4xl font-lobster-two text-black font-bold flex items-center gap-2 m-0 p-0 h-fit">
                     Hey! There is a way <img src="images/success.png" alt="successIcon" class="ml-2 h-[40px]">
                 </h2>
                 <button onclick="redirectUser()"
-                    class="text-white bg-[rgba(85,137,198,0.7)] hover:bg-[rgb(67,112,164)] active:border active:border-white font-roboto font-normal text-base px-3 py-1 mt-5 transition-all duration-200 ease-in-out">
+                    class="text-white bg-[rgba(67,113,165,0.7)] hover:bg-[rgb(51,85,123)] active:border active:border-white font-roboto font-normal text-base px-4 py-1 mt-5 transition-all duration-200 ease-in-out">
                     Get Started
                 </button>
             </span>
@@ -63,7 +63,7 @@
     </div>
 
     <main class="h-fit w-screen text-center">
-        <div class="nextStep-intro  gap-y-40 flex-col content-center justify-center bg-white h-screen text-center ">
+        <div  id="nextStep-intro" class=" gap-y-40 flex-col content-center justify-center bg-white  text-center ">
             <h1 class="text-3xl font-bold  mb-8">What is <b>NextStep</b>?</h1>
             <p class="w-[60vw] text-justify leading-7 text-xl font-lato font-normal mx-auto mb-6  tracking-wide break-words">
                 Every great idea begins with a spark, and <strong>NextStep</strong> is no different. What started as a shared passion among a group of 
@@ -82,7 +82,7 @@
             </p>
         </div>
         
-        <div class="nextStep-features flex-col content-center border bg-white">
+        <div class="nextStep-features flex-col content-center  bg-white">
             <h1 class="text-3xl font-bold text-center mb-8">Our latest <b>Features &gt;</b></h1>
             <div class="feature-card-container flex justify-center items-center w-4/5 mx-auto">
                 
@@ -119,116 +119,114 @@
             </div>
         </div>
         
-        <div class="nextStep-team">
-            <h1>Meet the <b>Team!</b></h1>
-            <h2>Web Team | ML Team </b></h2>
-
-            <div class="team-members-container">
-                <div class="team-member-cards01">
-                    <span class="member-card" id="Ayush">
-                        <img src="images/Abhilash.jpg" alt="">
+        <div class="nextStep-team h-[120vh] content-center bg-white">
+            <h1 class="">Meet the <b>Team!</b></h1>
+            <h2 class="text-3xl">Web Team | ML Team</h2>
+        
+            <div class="team-members-container mx-auto my-[50px] flex w-[65%] justify-evenly">
+                <div class="team-member-cards01 flex flex-col justify-evenly">
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Abhilash.jpg" alt="">
                     </span>
-
-                    <span class="member-card" id="">
-                        <img src="images/Aishwarya.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Aishwarya.jpg" alt="">
                     </span>
                 </div>
-
-                <div class="team-member-cards02">
-                    <span class="member-card">
-                        <img src="images/AyushImg.jpg" alt="">
+        
+                <div class="team-member-cards02 grid grid-cols-2 grid-rows-3 gap-10 w-1/2 items-center justify-items-center">
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/AyushImg.jpg" alt="">
                     </span>
-
-                    <span class="member-card">
-                        <img src="images/devansh.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/devansh.jpg" alt="">
                     </span>
-
-                    <span class="member-card">
-                        <img src="images/Mayank.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Mayank.jpg" alt="">
                     </span>
-
-                    <span class="member-card">
-                        <img src="images/Mohit.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Mohit.jpg" alt="">
                     </span>
-
-                    <span class="member-card">
-                        <img src="images/Aryan.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Aryan.jpg" alt="">
                     </span>
-
-                    <span class="member-card">
-                        <img src="images/Sowmyadeep.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Sowmyadeep.jpg" alt="">
                     </span>
-
                 </div>
-
-                <div class="team-member-cards03">
-                    <span class="member-card">
-                        <img src="images/Kushi.jpg" alt="">
+        
+                <div class="team-member-cards03 flex flex-col justify-evenly">
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Kushi.jpg" alt="">
                     </span>
-
-                    <span class="member-card">
-                        <img src="images/Ananya.jpg" alt="">
+        
+                    <span class="member-card block h-40 w-40 rounded-full overflow-hidden">
+                        <img class="h-full w-full rounded-full grayscale transition-all duration-700 hover:scale-110 hover:shadow-lg hover:grayscale-0" src="images/Ananya.jpg" alt="">
                     </span>
-
                 </div>
-
-
             </div>
         </div>
+        
     </main>
 
-    <footer>
-        <div class="list-container">
-
-            <div class="Support">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="">Help</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">About Us</a></li>
+    <footer class="h-fit bg-blue-500/70 overflow-hidden">
+        <div class="list-container flex h-5/6 w-full font-roboto text-white/90">
+            
+            <div class="Support flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
+                <h3 class="mb-4 inline text-lg font-semibold">Support</h3>
+                <ul class="list-none space-y-2">
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Help</a></li>
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Contact</a></li>
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">About Us</a></li>
                 </ul>
             </div>
-
-            <div class="Explore">
-                <h3>Explore</h3>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Roadmap</a></li>
-                    <li><a href="">Community</a></li>
-                    <li><a href="">Courses</a></li>
+    
+            <div class="Explore flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
+                <h3 class="mb-4 inline text-lg font-semibold">Explore</h3>
+                <ul class="list-none space-y-2">
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Home</a></li>
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Roadmap</a></li>
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Community</a></li>
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Courses</a></li>
                 </ul>
             </div>
-
-            <div class="Profile">
-                <h3>Profile</h3>
-                <ul>
-                    <li><a href="">My Profile</a></li>
+    
+            <div class="Profile flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
+                <h3 class="mb-4 inline text-lg font-semibold">Profile</h3>
+                <ul class="list-none space-y-2">
+                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">My Profile</a></li>
                 </ul>
             </div>
-
-            <div class="nextsteplogo-footer">
-                <div class="nextsteplogo-footer-container">
-
-                    <img src="images/nextStepLogo.png" alt="NextStep">
-                    <span id="nextstep-intro-footer">
-                        <h1>NextStep</h1>
-                        <h2>Hey! There is a way <img src="images/success.png" alt="successIcon"></h2>
+    
+            <div class="nextsteplogo-footer flex items-center justify-center h-full w-[calc(100%-51%)]">
+                <div class="nextsteplogo-footer-container flex items-center gap-5 justify-center">
+                    <img src="images/nextStepLogo.png" alt="NextStep" class="h-36">
+                    <span id="nextstep-intro-footer" class="flex flex-col">
+                        <h1 class="text-5xl font-poppins">NextStep</h1>
+                        <h2 class="text-xl font-lobster flex items-center space-x-2">
+                            <span>Hey! There is a way</span>
+                            <img src="images/success.png" alt="successIcon" class="h-8">
+                        </h2>
                     </span>
                 </div>
-
             </div>
+    
         </div>
-
-
-        <div class="copywright-contacts">
+    
+        <div class="copywright-contacts flex justify-between items-center px-5 py-3 text-sm text-white">
             <p>&copy; NextStep@VitBhopal</p>
-            <span id="contacts">
-                <a href=""><img src="images/mailIcon.png" alt="Mail"></a>
-                <a href=""><img src="images/linkedInIcon.png" alt="LinkedIn"></a>
+            <span id="contacts" class="flex space-x-3">
+                <a href="#"><img src="images/mailIcon.png" alt="Mail" class="h-5 ml-1"></a>
+                <a href="#"><img src="images/linkedInIcon.png" alt="LinkedIn" class="h-5 ml-1"></a>
             </span>
         </div>
-
     </footer>
+    
 
     <script src="script.js"></script>
 </body>

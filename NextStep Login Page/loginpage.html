@@ -3,28 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextStep Login</title>
+    <title>NextStep - Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Choose Your Path</h1>
-        <div class="user-type">
-            <div class="user-option student">
-                <img src="images/student.png" alt="Student">
-                <p>Student</p>
+    <div class="login-container">
+        <div class="login-box">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to NEXTSTEP</h2>
+            <p>Join / Sign In using</p>
+
+            <!-- Google Sign-In Button -->
+            <div id="g_id_onload"
+                data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleGoogleLogin"
+                data-auto_prompt="false">
             </div>
-            <div class="user-option professional">
-                <img src="images/professional.png" alt="Professional">
-                <p>Professional</p>
+            <div class="social-buttons">
+                <div class="google-btn" id="googleBtn">
+                    <img src="images/google-icon.png" alt="Google Icon"> GOOGLE
+                </div>
+
+                <!-- Facebook Sign-In Button -->
+                <div class="facebook-btn" id="facebookBtn">
+                    <img src="images/facebook-icon.png" alt="Facebook Icon"> FACEBOOK
+                </div>
             </div>
+
+            <div class="divider">Or</div>
+
+            <label for="mobile">Enter Mobile Number *</label>
+            <input type="tel" id="mobile" placeholder="Enter Mobile Number" required>
+
+            <button id="continueBtn">CONTINUE</button>
+
+            <p class="terms">
+                By Signing In, I agree to <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+            </p>
         </div>
-        <div class="logo">
-        </div>
-        <div class="footer">
-            <p>Already Have An Account ? <span class="underline">Login</span></p>
-            <p><span class="underline">Need help?</span></p>
-        </div>
-    </div>    
+    </div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

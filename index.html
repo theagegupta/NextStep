@@ -174,43 +174,45 @@
         
     </main>
 
-    <footer class="h-fit bg-blue-500/70 overflow-hidden">
-        <div class="list-container flex h-5/6 w-full font-roboto text-white/90">
+    <footer class="h-fit  overflow-hidden">
+        <div class="list-container flex justify-between w-full font-roboto text-white">
             
-            <div class="Support flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
-                <h3 class="mb-4 inline text-lg font-semibold">Support</h3>
-                <ul class="list-none space-y-2">
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Help</a></li>
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Contact</a></li>
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">About Us</a></li>
-                </ul>
+            <div id="lists" class="flex ">
+                <div class="Support flex flex-col items-start justify-start ml-16 mt-6 w-1/6">
+                    <h3 class="mb-4 text-lg font-semibold">Support</h3>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#" class="">Help</a></li>
+                        <li><a href="#" class="">Contact</a></li>
+                        <li><a href="#" class="">About Us</a></li>
+                    </ul>
+                </div>
+        
+                <div class="Explore flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
+                    <h3 class="mb-4 text-lg font-semibold">Explore</h3>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#" >Roadmap</a></li>
+                        <li><a href="#" >Community</a></li>
+                        <li><a href="#" >Courses</a></li>
+                    </ul>
+                </div>
+        
+                <div class="Profile flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
+                    <h3 class="mb-4 text-lg font-semibold">Profile</h3>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#" >My Profile</a></li>
+                    </ul>
+                </div>
             </div>
-    
-            <div class="Explore flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
-                <h3 class="mb-4 inline text-lg font-semibold">Explore</h3>
-                <ul class="list-none space-y-2">
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Home</a></li>
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Roadmap</a></li>
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Community</a></li>
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">Courses</a></li>
-                </ul>
-            </div>
-    
-            <div class="Profile flex flex-col items-start justify-start pl-16 pt-6 w-1/6">
-                <h3 class="mb-4 inline text-lg font-semibold">Profile</h3>
-                <ul class="list-none space-y-2">
-                    <li><a href="#" class="text-white/90 text-sm no-underline hover:text-black/90">My Profile</a></li>
-                </ul>
-            </div>
-    
-            <div class="nextsteplogo-footer flex items-center justify-center h-full w-[calc(100%-51%)]">
-                <div class="nextsteplogo-footer-container flex items-center gap-5 justify-center">
-                    <img src="images/nextStepLogo.png" alt="NextStep" class="h-36">
+
+            <div class="nextsteplogo-footer flex items-center content-center justify-center h-auto">
+                <div class="nextsteplogo-footer-container flex items-center gap-8 justify-center">
+                    <img src="images/nextStepLogo.png" alt="NextStep" class="">
                     <span id="nextstep-intro-footer" class="flex flex-col">
-                        <h1 class="text-5xl font-poppins">NextStep</h1>
-                        <h2 class="text-xl font-lobster flex items-center space-x-2">
-                            <span>Hey! There is a way</span>
-                            <img src="images/success.png" alt="successIcon" class="h-8">
+                        <h1 class="text-4xl font-poppins font-semibold">NextStep</h1>
+                        <h2 class="text-xl font-lobster flex text-black items-center space-x-2">
+                            <span class="text-black">Hey! There is a way</span>
+                            <img src="images/success.png" alt="successIcon" class="">
                         </h2>
                     </span>
                 </div>
@@ -218,11 +220,11 @@
     
         </div>
     
-        <div class="copywright-contacts flex justify-between items-center px-5 py-3 text-sm text-white">
+        <div class="copywright-contacts flex  justify-between items-center px-4 text-sm">
             <p>&copy; NextStep@VitBhopal</p>
             <span id="contacts" class="flex space-x-3">
-                <a href="#"><img src="images/mailIcon.png" alt="Mail" class="h-5 ml-1"></a>
-                <a href="#"><img src="images/linkedInIcon.png" alt="LinkedIn" class="h-5 ml-1"></a>
+                <a title="Mail" href="#"><img src="images/mailIcon.png" alt="Mail" class="h-4"></a>
+                <a  title="LinkedIn" href="#"><img src="images/linkedInIcon.png" alt="LinkedIn" class="h-4 ml-2"></a>
             </span>
         </div>
     </footer>

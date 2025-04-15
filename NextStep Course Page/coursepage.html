@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Pathways - Courses & Roadmaps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container container">
+            <a href="#" class="logo">Career Pathways</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="block hover:text-highlight hover:underline transition duration-300">Home</a></li>
+                    <li><a href="#" class="active">Courses</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="page-title">
+            <h1>Explore Career Pathways</h1>
+            <p>Choose from our comprehensive collection of career roadmaps to guide you toward your professional goals. Each pathway provides a step-by-step plan to help you succeed.</p>
+        </section>
+        
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for careers or skills...">
+                <button class="search-button" id="searchButton">Search</button>
+            </div>
+            
+            <div class="category-section">
+                <h3 class="category-title">Browse by Industry</h3>
+                <div class="category-filters" id="categoryFilters">
+                    <button class="category-filter active" data-category="all">All Industries</button>
+                    <!-- Categories will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <section class="courses-grid" id="coursesGrid">
+            <!-- Courses will be populated by JavaScript -->
+            <div class="loading" id="loadingIndicator">Loading courses...</div>
+        </section>
+    </main>
+    
+    <div class="modal-overlay" id="roadmapModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Career Roadmap</h2>
+                <p class="modal-subtitle" id="modalSubtitle">Industry: Technology</p>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="roadmap-container" id="roadmapContainer">
+                    <div class="roadmap-line"></div>
+                    <!-- Roadmap steps will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
